@@ -30,6 +30,7 @@ CREATE TABLE public.kalp (
 	CONSTRAINT check_value_range_thal CHECK (((thal >= 0) AND (thal <= 3))),
 	CONSTRAINT check_value_range_thalach CHECK (((thalach >= 0) AND (thalach <= 350))),
 	CONSTRAINT check_value_range_trestbps CHECK (((trestbps >= 0) AND (trestbps <= 220))),
+	CONSTRAINT check_value_range_target CHECK (((target >= 0) AND (target <= 1))),
 	CONSTRAINT kalp_id_pk PRIMARY KEY (kalp_id)
 );
 CREATE INDEX hasta_id_index ON public.kalp USING btree (hasta_id);
